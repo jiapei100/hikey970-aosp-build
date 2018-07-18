@@ -22,6 +22,11 @@ Specific changes are shown below:
 
 ![Changes](https://pic3.zhimg.com/80/v2-06eb6b89334269d4f66d7c410a03a531_hd.jpg)
 
+Install openssl headers on ubuntu
+```
+sudo apt install libssl-dev
+```
+
 Compile:
 ```
 l-loader/build_uefi.sh hikey970
