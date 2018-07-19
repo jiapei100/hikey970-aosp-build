@@ -60,24 +60,21 @@ make hisilicon/kirin970-hikey970.dtb
 **3. AOSP**
 ```
 mkdir aosp && cd aosp
-```
-```
 repo init -u https://android.googlesource.com/platform/manifest -b master
-```
-```
-repo init -u git://mirrors.ustc.edu.cn/aosp/platform/manifest -b master
-```
-```
 git clone https://github.com/96boards-hikey/android-manifest.git -b hikey970_v1.0 .repo/local_manifest
-```
-```
 sudo repo sync
 ```
-*Compile:*
+*Copy for compilation:*
 
-Copy kirin970-hikey970.dtb (arch/arm64/boot/dts/hisilicon/ kirin970-hikey970.dtb) to the device/linaro/hikey-kernel directory as file: kirin970-hikey970.dtb-4.9  
-
-Copy the Image file (arch/arm64/boot/Image.gz-dtb) to the device/linaro/hikey-kernel directory as file: Image.gz-hikey970-4.9
+kirin970-hikey970.dtb -> kirin970-hikey970.dtb-4.9
+``` 
+cp /home/maxim/hikey970source/kernel/linux/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dtb /home/maxim/hikey970source/aosp/device/linaro/hikey-kernel/kirin970-hikey.dtv-4.9
+```
+Image.gz -> Image.gz-hikey970-4.9
+```
+cp /home/maxim/hikey970source/kernel/linux/arch/arm64/boot/Image.gz /home/maxim/hikey970source/aosp/device/linaro/hikey-kernel/Image.gz-hikey970-4.9
+```
+Build:
 ```
 source ./build/envsetup.sh
 lunch hikey970-userdebug
