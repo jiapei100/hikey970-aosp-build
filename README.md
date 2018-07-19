@@ -12,7 +12,7 @@ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarc
 Download and unpack gcc 7.1.1
 ```
 wget https://releases.linaro.org/components/toolchain/binaries/7.1-2017.08/aarch64-linux-gnu/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
-tar -xzvf gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
+tar -xvf gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
 ```
 
 **1. Bootloader**
