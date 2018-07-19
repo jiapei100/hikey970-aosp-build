@@ -1,3 +1,20 @@
+Basic directory - /home/maxim/hikey970source/
+
+**0. Toolchain && misc**  
+Create folder for toolchain and enter it
+```
+mkdir toolchain && cd toolchain
+```
+Clone compile toolchain:
+```
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
+```
+Download and unpack gcc 7.1.1
+```
+wget https://releases.linaro.org/components/toolchain/binaries/7.1-2017.08/aarch64-linux-gnu/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
+tar -xzvf gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu.tar.xz
+```
+
 **1. Bootloader**
 ```
 sudo apt-get install uuid-dev build-essential
@@ -15,8 +32,10 @@ git clone https://github.com/96boards-hikey/uefi-tools.git -b hikey970_v1.0
 cd edk2
 ln -sf ../OpenPlatformPkg
 ```
+Replace path to GCC 7.1.1
+/home/maxim/hikey970source/toolchain/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin
 ```
-vim ${BUILD_PATH}/l-loader/build_uefi.sh
+vim /home/maxim/hikey970source/bootloader/l-loader/build_uefi.sh
 ```
 Specific changes are shown below:
 
@@ -40,10 +59,6 @@ mkdir kernel && cd kernel
 git clone https://github.com/96boards-hikey/linux.git -b hikey970-v4.9
 cd linux
 git checkout hikey970-v4.9
-```
-Compile chain download:
-```
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
 ```
 Setting environment variables:
 ```text
