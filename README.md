@@ -38,6 +38,8 @@ mkdir kernel && cd kernel
 ```
 ```
 git clone https://github.com/96boards-hikey/linux.git -b hikey970-v4.9
+cd linux
+git checkout hikey970-v4.9
 ```
 Compile chain download:
 ```
@@ -46,7 +48,7 @@ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarc
 Setting environment variables:
 ```text
 export ARCH=arm64
-export CROSS_COMPILE=/xxx/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/maxim/hikey970source/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 ```
 Making:
 ```
