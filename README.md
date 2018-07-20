@@ -61,7 +61,6 @@ mkdir kernel && cd kernel
 ```
 git clone https://github.com/96boards-hikey/linux.git -b hikey970-v4.9
 cd linux
-git checkout hikey970-v4.9
 ```
 Setting environment variables:
 ```text
