@@ -85,7 +85,7 @@ sudo repo sync
 
 kirin970-hikey970.dtb -> kirin970-hikey970.dtb-4.9
 ``` 
-cp /home/maxim/hkey/kernel/linux/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dtb /home/maxim/hkey/aosp/device/linaro/hikey-kernel/kirin970-hikey.dtv-4.9
+cp /home/maxim/hkey/kernel/linux/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dtb /home/maxim/hkey/aosp/device/linaro/hikey-kernel/kirin970-hikey970.dtv-4.9
 ```
 Image.gz -> Image.gz-hikey970-4.9
 ```
