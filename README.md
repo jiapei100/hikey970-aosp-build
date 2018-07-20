@@ -1,4 +1,4 @@
-Basic directory - /home/maxim/hikey970source/
+Basic directory - /home/maxim/hkey/
 
 **0. Toolchain && misc**  
 Create folder for toolchain and enter it
@@ -36,9 +36,9 @@ cd edk2
 ln -sf ../OpenPlatformPkg
 ```
 Replace path to GCC 7.1.1
-/home/maxim/hikey970source/toolchain/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin
+/home/maxim/hkey/toolchain/gcc-linaro-7.1.1-2017.08-x86_64_aarch64-linux-gnu/bin
 ```
-vim /home/maxim/hikey970source/bootloader/l-loader/build_uefi.sh
+vim /home/maxim/hkey/bootloader/l-loader/build_uefi.sh
 ```
 Install openssl headers on ubuntu
 ```
@@ -62,7 +62,7 @@ git checkout hikey970-v4.9
 Setting environment variables:
 ```text
 export ARCH=arm64
-export CROSS_COMPILE=/home/maxim/hikey970source/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/maxim/hkey/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 ```
 Making:
 ```
@@ -82,11 +82,11 @@ sudo repo sync
 
 kirin970-hikey970.dtb -> kirin970-hikey970.dtb-4.9
 ``` 
-cp /home/maxim/hikey970source/kernel/linux/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dtb /home/maxim/hikey970source/aosp/device/linaro/hikey-kernel/kirin970-hikey.dtv-4.9
+cp /home/maxim/hkey/kernel/linux/arch/arm64/boot/dts/hisilicon/kirin970-hikey970.dtb /home/maxim/hkey/aosp/device/linaro/hikey-kernel/kirin970-hikey.dtv-4.9
 ```
 Image.gz -> Image.gz-hikey970-4.9
 ```
-cp /home/maxim/hikey970source/kernel/linux/arch/arm64/boot/Image.gz /home/maxim/hikey970source/aosp/device/linaro/hikey-kernel/Image.gz-hikey970-4.9
+cp /home/maxim/hkey/kernel/linux/arch/arm64/boot/Image.gz /home/maxim/hkey/aosp/device/linaro/hikey-kernel/Image.gz-hikey970-4.9
 ```
 Build:
 ```
