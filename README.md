@@ -79,7 +79,7 @@ make hisilicon/kirin970-hikey970.dtb
 mkdir aosp && cd aosp
 repo init -u https://android.googlesource.com/platform/manifest -b master
 git clone https://github.com/96boards-hikey/android-manifest.git -b hikey970_v1.0 .repo/local_manifests
-sudo repo sync
+repo sync --force-sync -j$(nproc)
 ```
 *Copy for compilation:*
 
